@@ -1,0 +1,54 @@
+/*.target1, .target2, .target3 {*/
+/*    width: 400px;*/
+/*    height: 200px;*/
+/*    background: silver;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.target2 {*/
+/*    background: red;*/
+/*}*/
+
+/*.target3 {*/
+/*    height: 300px;*/
+/*}*/
+
+.w200 {
+    width: 200px;
+}
+
+.w300 {
+    width: 300px;
+    border: 1px solid red;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.h200 {
+    height: 200px;
+}
+
+.h300 {
+    height: 300px;
+}
+
+.bg-silver {
+    background: silver;
+    color: white;
+}
+
+.bg-2 {
+    background: cornflowerblue;
+    color: red;
+}
+
+.fz-20 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fz-30 {
+    font-size: 30px;
+}
+
+

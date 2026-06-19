@@ -1,0 +1,41 @@
+.target {
+
+    /*width: 100%;*/
+    width: 40%;
+    min-width: 400px;
+    height: 300px;
+    background: silver;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and  (max-width: 800px) {
+    .target {
+        min-width: 100%;
+        margin-top: 30px;
+        height: 400px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+    .target {
+        background: cornflowerblue;
+    }
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+    .target {
+        background: mediumpurple;
+    }
+
+}
+

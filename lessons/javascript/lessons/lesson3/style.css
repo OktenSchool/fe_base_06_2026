@@ -1,0 +1,8 @@
+.product-class {
+    width: 200px;
+    background:silver;
+
+    img {
+        width: 100%;
+    }
+}

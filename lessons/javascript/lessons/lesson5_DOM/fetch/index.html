@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .product {
+            width: 400px;
+
+            img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<script>
+
+    // "id": 4,
+    //     "title": "Red Lipstick",
+    //     "description": "The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.",
+    //     "category": "beauty",
+    //     "price": 12.99,
+
+    fetch('https://dummyjson.com/products')
+        .then(value => value.json())
+        .then(obj => {
+            for (const product of obj.products) {
+                let divProduct = document.createElement('div');
+                divProduct.classList.add('product');
+
+                let h3Title = document.createElement('h3');
+                h3Title.innerText = `${product.id}. ${product.title} price - ${product.price}`;
+
+                let description = document.createElement('p');
+                description.innerText = product.description;
+
+                let picture = document.createElement('img');
+                picture.src = product.images[0];
+
+                let addTCartButton = document.createElement('button');
+                addTCartButton.innerText = 'add to cart';
+                addTCartButton.onclick = function () {
+                    console.log('add to cart', product.title);
+
+                };
+
+
+                divProduct.append(h3Title, description, picture, addTCartButton);
+
+                document.body.appendChild(divProduct);
+
+
+            }
+
+        });
+
+
+</script>
+
+</body>
+</html>
